@@ -31,3 +31,13 @@
 .navbar-horizontal ul li a:hover {
   color: #cccccc;
 }
+
+/* Estilos para pantallas más pequeñas, por ejemplo, dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .navbar-horizontal {
+    /* Agrega estilos específicos para dispositivos móviles */
+    position: static; /* Cambia la posición del nav para que no se superponga con el contenido */
+    /* Agrega cualquier otro estilo necesario para dispositivos móviles */
+  }
+}
+
