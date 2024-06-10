@@ -1,11 +1,11 @@
 .navbar-horizontal {
   width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 10px 0; /* Asegúrate de que no haya padding en la parte inferior */
-  position: fixed; /* Fija la barra de navegación en la parte superior */
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 10px 0;
+  position: fixed;
   top: 0;
-  z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+  z-index: 1000;
 }
 
 .navbar-horizontal ul {
@@ -21,8 +21,13 @@
 }
 
 .navbar-horizontal ul li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   padding: 10px 20px;
   display: block;
+  transition: color 0.3s ease;
+}
+
+.navbar-horizontal ul li a:hover {
+  color: #cccccc;
 }

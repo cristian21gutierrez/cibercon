@@ -5,6 +5,7 @@ import Statistics from '../components/Statistics';
 import CarouselComponent from '../components/CarouselComponent';
 import '../styles/Home.css';
 
+
 const Home = () => {
   const cards = [
     { id: 1, title: 'Netiquetas', description: 'Las netiquetas son ...' },
@@ -15,7 +16,6 @@ const Home = () => {
     { id: 6, title: 'Más información', description: 'Aquí puedes encontrar ...' },
     { id: 7, title: 'Más información', description: 'Aquí puedes encontrar ...' },
     { id: 8, title: 'Más información', description: 'Aquí puedes encontrar ...' },
-    { id: 9, title: 'Más información', description: 'Aquí puedes encontrar ...' },
   ];
 
   return (
@@ -33,6 +33,7 @@ const Home = () => {
         ))}
       </div>
       <Statistics />
+      
     </div>
   );
 };

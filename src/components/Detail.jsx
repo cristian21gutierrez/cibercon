@@ -1,36 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import "../styles/Detail.css";
 
 const details = {
   1: {
     title: 'Netiquetas',
-    content: 'Las netiquetas son las reglas de comportamiento que deben seguirse en el uso de Internet y redes sociales...'
+    sections: [
+      { subtitle: 'Introducción', content: 'Las netiquetas son las reglas de comportamiento que deben seguirse en el uso de Internet y redes sociales...' },
+      { subtitle: 'Ejemplos', content: 'Algunos ejemplos de netiquetas incluyen...' }
+    ]
   },
   2: {
     title: 'Grooming',
-    content: 'El grooming es el acoso y abuso sexual de menores a través de Internet por parte de adultos...'
+    sections: [
+      { subtitle: '¿Qué es el grooming?', content: 'Se denomina grooming al acoso sexual que un adulto realiza en Internet contra un menor de edad. Con un perfil falso que oculta su identidad, el acosador se hace pasar por un niño o adolescente para vincularse con menores en redes sociales, aplicaciones o videojuegos compartidos.' },
+      {  content: 'Una vez que entra en confianza, logra que el menor le envíe fotos o videos con contenido sexual para luego chantajearlo o amenazarlo con publicar su material' }
+    ]
   },
   3: {
     title: 'Sexting',
-    content: 'El sexting se refiere al envío de mensajes, fotos o videos de contenido sexual a través de dispositivos electrónicos...'
+    sections: [
+      { subtitle: '¿Qué es el SEXTING?', content: 'Sexting es la acción de filmarse o sacarse fotos con contenido sexual o erótico y enviar esas imágenes o videos a una persona de confianza por medio del celular u otro dispositivo electrónico.' },
+      { subtitle: 'Riesgos', content: 'En la actualidad, es habitual que los jóvenes y adolescentes usen la tecnología para expresar sus deseos. No siempre evalúan los riesgos que puede generar el envío de imágenes o videos sexuales por internet' }
+    ]
   },
-  4: {
-    title: 'Ciberseguridad',
-    content: 'La ciberseguridad implica proteger sistemas, redes y programas de ataques digitales...'
-  },
-  5: {
-    title: 'Navegar en positivo',
-    content: 'Navegar en positivo es utilizar Internet de manera segura y constructiva...'
-  },
-  6: {
-    title: 'Más información',
-    content: 'Aquí puedes encontrar más información sobre cómo protegerte en Internet...'
-  },
+  // Resto de los detalles...
 };
 
 const Detail = () => {
   const { id } = useParams();
   const detail = details[id];
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Desplaza la página hacia arriba cuando se monta el componente
+  }, []);
 
   if (!detail) {
     return <p>Detalle no encontrado</p>;
@@ -39,7 +42,12 @@ const Detail = () => {
   return (
     <div className="detail">
       <h2>{detail.title}</h2>
-      <p>{detail.content}</p>
+      {detail.sections.map((section, index) => (
+        <div key={index}>
+          <h3>{section.subtitle}</h3>
+          <p>{section.content}</p>
+        </div>
+      ))}
     </div>
   );
 };

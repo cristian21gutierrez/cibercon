@@ -5,7 +5,7 @@
   }
   
   .carousel .slide {
-    height: 60vh; /* Ajusta esta altura según tus necesidades */
+    height: 60vh; /* Ajustar la altura de las diapositivas según la pantalla */
   }
   
   .carousel .slide img {
@@ -20,5 +20,12 @@
     padding: 10px;
     border-radius: 10px;
     bottom: 20px;
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    .carousel .slide {
+      height: 40vh; /* Reducir la altura de las diapositivas en pantallas pequeñas */
+    }
   }
   

@@ -1,11 +1,17 @@
 .card {
-    border: 1px solid #353434;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #353434;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .card {
+    padding: 15px; /* Reducir el relleno en pantallas pequeñas */
   }
-  
-  .card h3 {
-    margin-top: 0;
-  }
-  
+}
