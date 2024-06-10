@@ -1,0 +1,28 @@
+.navbar-horizontal {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 0; /* Asegúrate de que no haya padding en la parte inferior */
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0;
+  z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+}
+
+.navbar-horizontal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-horizontal ul li {
+  display: inline;
+}
+
+.navbar-horizontal ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
