@@ -1,45 +1,32 @@
 .home-container {
-    width: 100%;
-    padding: 0; /* Elimina el padding */
-    background-color: #f1f1f1;
-    text-align: center;
-    margin-top: 50px; /* Ajusta este valor según la altura de tu Navbar */
-  }
-  
-  .home-container h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .home-container p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 40px;
-  }
-  
-  .carousel-container {
-    margin-bottom: 40px; /* Añade espacio debajo del carrusel */
-  }
-  
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-    z-index: 1000;
-  }
-  
-  .card-link {
-    text-decoration: none;
-  }
+  width: 100%;
+  background-color: #4d847f55;
+  text-align: center;
+}
 
-  .card-grid {
-    margin-top: 60px; /* ajusta este valor según la altura de tu barra de navegación */
-  }
-  
-  .detail {
-    margin-top: 60px; /* Ajusta este valor según la altura de tu barra de navegación */
-   
-  }
-  
+.home-container h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Aumenta ligeramente el tamaño del título */
+  color: #333;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px; /* Reduzco el espacio entre el título y el párrafo */
+}
+
+.carousel-container {
+  margin-bottom: 20px; /* Añade un poco de espacio debajo del carrusel */
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px; /* Reduzco el espacio entre las tarjetas y las estadísticas */
+}
+
+.card-link {
+  text-decoration: none;
+}

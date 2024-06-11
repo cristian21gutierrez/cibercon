@@ -1,11 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavbarHorizontal from '../src/components/NavbarHorizontal';
-
 import Home from '../src/components/Home';
 import Detail from '../src/components/Detail';
 import './App.css';
-import Footer from '../src/components/Footer';
 import About from '../src/components/About';
 
 
@@ -13,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <NavbarHorizontal />
+       
         <div className="content">
         
           <div className="main-content">
@@ -25,7 +22,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+    
     </Router>
   );
 };

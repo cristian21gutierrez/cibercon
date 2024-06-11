@@ -4,6 +4,8 @@ import Card from '../components/Card';
 import Statistics from '../components/Statistics';
 import CarouselComponent from '../components/CarouselComponent';
 import '../styles/Home.css';
+import NavbarHorizontal from '../components/NavbarHorizontal';
+import Footer from '../components/Footer';
 
 
 const Home = () => {
@@ -13,16 +15,13 @@ const Home = () => {
     { id: 3, title: 'Sexting', description: 'El sexting se refiere ...' },
     { id: 4, title: 'Ciberseguridad', description: 'La ciberseguridad ...' },
     { id: 5, title: 'Navegar en positivo', description: 'Navegar en positivo ...' },
-    { id: 6, title: 'Más información', description: 'Aquí puedes encontrar ...' },
-    { id: 7, title: 'Más información', description: 'Aquí puedes encontrar ...' },
-    { id: 8, title: 'Más información', description: 'Aquí puedes encontrar ...' },
   ];
 
   return (
     <div className="home-container">
+       <NavbarHorizontal />
       <h1>Bienvenidos a Ciberconscientes</h1>
-      <p>Somos estudiantes de la ESPES Agraria y nuestro objetivo es informar y educar sobre la navegación segura en redes.</p>
-      
+    
       <CarouselComponent />
 
       <div className="card-grid">
@@ -33,7 +32,7 @@ const Home = () => {
         ))}
       </div>
       <Statistics />
-      
+      <Footer/>
     </div>
   );
 };
