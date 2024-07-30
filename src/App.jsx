@@ -1,28 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../src/components/Home';
-import Detail from '../src/components/Detail';
-import './App.css';
-import About from '../src/components/About';
-
+import Register from './components/Register';
+import Login from './components/Login';
+import UserList from './components/UserList';
+import UserDetail from './components/UserDetail';
+import EditUser from './components/EditUser';
+import Home from './components/Home'; // Asegúrate de tener este componente
 
 const App = () => {
   return (
     <Router>
-      <div className="app">
-       
-        <div className="content">
-        
-          <div className="main-content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/detail/:id" element={<Detail />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
-          </div>
-        </div>
-      </div>
-    
+      <Routes>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/users" element={<UserList />} />
+        <Route path="/users/:id" element={<UserDetail />} />
+        <Route path="/users/:id/edit" element={<EditUser />} />
+        <Route path="/home" element={<Home />} /> {/* Ruta de inicio */}
+      </Routes>
     </Router>
   );
 };
