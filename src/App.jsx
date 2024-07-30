@@ -8,17 +8,23 @@ import EditUser from './components/EditUser';
 import Home from './components/Home';
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(null); // Inicialmente null para manejar el estado de carga
 
   useEffect(() => {
-    // Verifica si hay un token en localStorage para determinar si el usuario está autenticado
-    const token = localStorage.getItem('token');
-    if (token) {
-      setIsAuthenticated(true);
-    } else {
-      setIsAuthenticated(false);
-    }
+    // Verificar autenticación cuando el componente se monta
+    const checkAuth = async () => {
+      const token = localStorage.getItem('token');
+      // Aquí podrías hacer una llamada a tu backend para verificar el token, si es necesario
+      setIsAuthenticated(!!token); // true si hay un token, false de lo contrario
+    };
+
+    checkAuth();
   }, []);
+
+  if (isAuthenticated === null) {
+    // Mientras verificamos el estado de autenticación, no renderizamos nada
+    return <div>Cargando...</div>;
+  }
 
   return (
     <Router>
@@ -41,6 +47,7 @@ const App = () => {
           path="/users/:id/edit"
           element={isAuthenticated ? <EditUser /> : <Navigate to="/login" />}
         />
+        <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
   );
