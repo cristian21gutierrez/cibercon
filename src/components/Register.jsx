@@ -10,7 +10,7 @@ const Register = () => {
   const [success, setSuccess] = useState('');
 
   // Define la URL base de la API directamente
-  const apiUrl = 'http://localhost:3000/api';
+  const apiUrl = 'https://mi-primer-api-k2pd.onrender.com';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
